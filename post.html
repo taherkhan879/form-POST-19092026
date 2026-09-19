@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              roboto: ["Roboto", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="container mx-auto px-4">
+      <h1 class="font-roboto text-4xl pt-10 pb-5">Add User</h1>
+      <form id="myForm">
+        <div class="mb-6">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            class="w-full px-3 py-2 mt-3 border border-gray-300 rounded-md"
+          />
+          <p
+            id="nameErrMsg"
+            class="text-[#dc3545] font-roboto text-sm mt-1"
+          ></p>
+        </div>
+        <div class="mb-6">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            class="w-full px-3 py-2 mt-3 border border-gray-300 rounded-md"
+          />
+          <p
+            id="emailErrMsg"
+            class="text-[#dc3545] font-roboto text-sm mt-1"
+          ></p>
+        </div>
+        <div class="mb-6">
+          <label for="email">Working Status</label>
+          <select
+            id="status"
+            class="w-full mt-3 px-3 py-3 bg-white border border-gray-300 rounded-md"
+          >
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+        </div>
+
+        <div class="mb-6">
+          <p class="text-gray-900 text-lg mb-2">Gender</p>
+          <div class="flex items-center">
+            <input
+              type="radio"
+              name="gender"
+              id="genderMale"
+              value="Male"
+              checked
+            />
+            <label for="genderMale" class="ml-2 text-gray-700">Male</label>
+            <input
+              type="radio"
+              name="gender"
+              id="genderFemale"
+              value="Female"
+              class="ml-4"
+            />
+            <label for="genderFemale" class="ml-2 text-gray-700">Female</label>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
